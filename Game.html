@@ -52,24 +52,30 @@
 
 let color = document.getElementsByClassName("blue");
 let count = 0;
- 
+let cRed =0;
 for(let i = 0; i<color.length;i++){
     let random = Math.floor(Math.random() * 12);
 
 color.item(i).onclick = function(e){
+    
                 color.item(i).style.backgroundColor = "green";
-                if(color.item(i).style.backgroundColor != "green"){
-                  
-                }else if(color.item(i).style.backgroundColor = "green"){
+                
+                    if(color.item(i).style.backgroundColor = "green"){
                     count++;
+                    
                     if(count > random){
-                       
-                        color.item(i).style.backgroundColor = "red";
-                        alert("Bomb , you loast ");
+                        if(color.item(i).style.backgroundColor = "red"){
+                        cRed++;
+                        if(cRed>2){
+                            alert("lost");
+                        }
+                        }
+                        
                     }
                 }
             }
         }
+        alert(count);
        
      
     </script>
