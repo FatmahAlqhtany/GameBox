@@ -5,27 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        #red {
-            background-color: red;
-            width: 200px;
-            height: 200;
-        }
+                * {
+    
+    padding: 40px;
+    margin-left: 110px;
+    margin-top: -30px;
+
+    
+} 
         .blue {
-            background-color:rgb(115, 115, 230);
+            background-color:rgb(29, 29, 59);
             width: 50px;
             height: 50;
         }
-        .green {
-            background-color:green;
-            width: 50px;
-            height: 50;
-        }
+       
         #table{
             text-align: center;
         }
+
+
+html {
+    background-color: rgb(211, 209, 216);
+}
+
+
+
+h1 {
+    font-size: 30px;
+    font-family: Verdana;
+    color: rgb(8, 50, 88);
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 40px;
+    margin-left:-220px;
+    
+
+}
+
     </style>
 </head>
 <body>
+    <h1>Start the Game</h1>
+    
     <table id="table">
         <tr>
             <td class="blue"></td>
@@ -57,27 +78,29 @@ for(let i = 0; i<color.length;i++){
     let random = Math.floor(Math.random() * 12);
 
 color.item(i).onclick = function(e){
-    
-                color.item(i).style.backgroundColor = "green";
-                
-                    if(color.item(i).style.backgroundColor = "green"){
+                    if(color.item(i).style.backgroundColor = "#006400")
                     count++;
                     
                     if(count > random){
-                        if(color.item(i).style.backgroundColor = "red"){
+                        if(color.item(i).style.backgroundColor = "#8B0000"){
+                  
+                        
                         cRed++;
                         if(cRed>2){
-                            alert("lost");
+                            alert("Bomb You lost ");
                         }
                         }
                         
+                        
                     }
+                   
                 }
             }
-        }
-        alert(count);
+        
+        
        
      
     </script>
 </body>
 </html>
+
